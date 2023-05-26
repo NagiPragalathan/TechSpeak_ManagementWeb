@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>State govt fund Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href=" {% static 'vendors/feather/feather.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/ti-icons/css/themify-icons.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/css/vendor.bundle.base.css' %} ">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href=" {% static 'vendors/select2/select2.min.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/select2-bootstrap-theme/select2-bootstrap.min.css' %} ">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href=" {% static 'css/vertical-layout-light/style.css' %} ">
+  <!-- endinject -->
+  <link rel="shortcut icon" href=" {% static 'images/favicon.png' %} " />
+  <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-16 col-15 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href=" {% static 'index.html' %} "><img src=" {{ logo.image.url }} " class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href=" {% static 'index.html' %} "><img src=" {{ logo.image.url }} " alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end w-auto">
+        <!-- <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button> -->
+        
+        <!-- <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button> -->
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper" style="z-index: 999;" >
+    
+    
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" style="width: 400px;" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href=" {% static 'index.html' %} ">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title pl-2 pt-2">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <iconify-icon icon="mdi:about" width="20" height="20"></iconify-icon>
+              <span class="menu-title">About Us</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu " >
+                <li class="nav-item"> <a class="nav-link" href=" /about_edit ">About - page</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin_team ">Team</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/image_upload_page_gallery ">Gallery</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Career</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/testimonicals_edit ">Testimonials</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <iconify-icon icon="bx:book-reader" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Government Funding</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse " id="form-elements">
+              <ul class="nav flex-column sub-menu flex-wrap  " style="display: block; z-index: 09999999;">
+                <li class="nav-item"><a class="nav-link" href="/birac_edit ">Ministry of Science and Technology</a></li>
+                <li class="nav-item"><a class="nav-link" href=" /sisfs_edit ">Ministry of commerce and industries</a></li>
+                <li class="nav-item"><a class="nav-link" href=" /fishieries">Fisheries startup Grand Challenge</a></li>
+                <li class="nav-item"><a class="nav-link" href="/samridth_edit ">Ministry of Electronics and IT</a></li>
+                <li class="nav-item"><a class="nav-link" href="/edi_edit ">Ministry of Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="/startuptn_edit ">Start_UpTN</a></li>
+                <li class="nav-item"><a class="nav-link" href="/edi_edit ">EDII-IVP</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts_1" aria-expanded="false" aria-controls="charts">
+              <iconify-icon icon="teenyicons:bulb-on-solid" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Services</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts_1">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /service_edit ">Edit Page</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <iconify-icon icon="teenyicons:bulb-on-solid" width="20" height="20"></iconify-icon>
+              <span class="menu-title">MBA-IEV</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" MBA_edit ">MBA-IEV EDIT page</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <iconify-icon icon="material-symbols:vpn-key-outline-rounded" width="20" height="20"></iconify-icon>
+              <span class="menu-title"> Our Startups</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /ourStartups_edit ">Edit Page</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#blog" aria-expanded="false" aria-controls="icons">
+              <iconify-icon icon="arcticons:netbenefits" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Blog</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="blog">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /list_edit_blog">Blog Edit Page</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <iconify-icon icon="arcticons:netbenefits" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Benefits</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <h5 class="m-2 p-4 primary">Mentor</h5>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /Mentor_Clinic_edit ">Mentor Clinic</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /Mentor_Connect_edit ">Mentor Connect</a></li>
+              </ul>
+              <h5 class="m-2 p-4 primary">Market</h5>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /GlobalMarket_edit ">Global Market Connect</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /demoday_edit ">Demo day</a></li>
+              </ul>
+
+              <h5 class="m-2 p-4 primary">Money</h5>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /stategovtfunds_edit ">State Govt Funding</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /CentralGovernmentFunding_edit ">central govt Funding</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /angelInvestor_edit ">Angel Investors</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /new_ventures_edit ">Venture Capitalist</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Contact - Us</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="contact_edit "> Edit Page </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#foot" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Footer</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="foot">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/footer_edit "> Footer edit page </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <iconify-icon icon="material-symbols:settings-suggest-rounded" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Forms data Download</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#"> Career Form </a></li>
+                <li class="nav-item"> <a class="nav-link" href="# "> Events Form </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+
+
+
+      <!-- partial -->
+      <div class="main-panel">        
+        <div class="content-wrapper">
+            <!-- slider section -->
+            <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">State govt fund edit page </h4>
+                    
+                      <form class="forms-sample" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Main-Heading</label>
+                          <input type="text" class="form-control" placeholder="Main_heading" id="Main_heading" name="Main_heading">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Sub-Heading</label>
+                          <input type="text" class="form-control" placeholder="Sub_Heading" id="Sub_Heading" name="Sub_Heading">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Point-1</label>
+                            <input type="text" class="form-control" placeholder="Point_1" id="Point_1" name="Point_1">
+                          </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Point-2</label>
+                            <input type="text" class="form-control" placeholder="Point_2" id="Point_2" name="Point_2">
+                          </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Point-3</label>
+                            <input type="text" class="form-control" placeholder="Point_3" id="Point_3" name="Point_3">
+                          </div>
+                      
+                        <button id="btn" onclick="img_upload('upload_logo','#fileInput-single',['#reson'])" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+
+            <!-- second section -->
+                <section class="overflow-hidden text-gray-700 ">
+                    <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+                            <div class="flex flex-wrap -m-1 md:-m-2" style="    margin-top: 16px;">
+                              {% for j in logo_collection %}
+                                  <div class="flex flex-wrap w-1/3">
+                                      <div class="w-full p-1 md:p-2">
+                                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"src="{{ j.image.url }}">
+                                      </div>
+                                      <div style="    display: flex; flex-direction: row; flex-wrap: wrap; align-content: center; justify-content: space-between; width: 100%; align-items: center;">
+                                        <button onclick="del('delete_logo','{{ j.L_id }}')" style="display: flex; flex-wrap: nowrap; flex-direction: row; align-content: center; justify-content: center; align-items: center;"><iconify-icon icon="ic:baseline-delete-forever" style="color: red;" width="20" height="20"></iconify-icon>
+                                        <h6>Delete</h6></button><button onclick="del('set_logo','{{ j.L_id }}')" style="display: flex; flex-wrap: nowrap; flex-direction: row; align-content: center; justify-content: center; align-items: center;"><iconify-icon icon="icon-park:difference-set" width="20" height="20"></iconify-icon>
+                                          <h6>set logo</h6></button>
+                                      </div>
+                                    </div>
+                              {% endfor %}
+                            </div>
+                    </div>
+                </section>
+          </div>
+             <!-- second section -->
+             <div class="row">
+               <div class="col-md-12 grid-margin stretch-card">
+                 <div class="card">
+                   <div class="card-body">
+                     <h4 class="card-title">Second - section</h4>
+                     <p class="card-description">
+                    Innovation
+                     </p>
+                     <form class="forms-sample" enctype="multipart/form-data" method="post">
+                       {% csrf_token %}
+                       <div class="form-group">
+                        <label for="exampleInputEmail1">Main-Heading</label>
+                        <input type="text" class="form-control" placeholder="Main_heading" id="Main_heading" name="Main_heading">
+                      </div>
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">Sub heading</label>
+                           <input type="text" class="form-control" placeholder="Sub-heading" id="Sub-heading" name="Sub-heading">
+                         </div>
+                         <p class="card-description">
+                            We aim at : 
+                             </p>
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Point-1</label>
+                           <input type="text" class="form-control" placeholder="Point-1" id="Point-1" name="Point-1">
+                         </div>                    
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Point-2</label>
+                           <input type="text" class="form-control" placeholder="Point-2" id="Point-2" name="Point-2">
+                         </div>                    
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Point-3</label>
+                           <input type="text" class="form-control" placeholder="Point-3" id="Point-3" name="Point-3">
+                         </div>                    
+                     
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">image</label>
+                         <input type="file" id="fileInput-single" class="form-control drop-zoon__file-input" accept="image/*" name="image_file" >
+                       </div>
+                       <button id="btn" onclick="upload()" class="btn btn-primary mr-2">Submit</button>
+                       <button class="btn btn-light">Cancel</button>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+           
+               <!-- <section class="overflow-hidden text-gray-700 ">
+                   {% for i in team %}
+                       <div>
+                           <h1 style="margin-top: 20px; margin-bottom: 12px; font-weight: bold; font-size: 22px;">{{ i.0.categories }}</h1>
+                           <hr>
+                       </div>
+                       <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                           {% for j in i %}
+                               <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                                   <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                                   <div class="space-y-4 text-center divide-y divide-gray-700">
+                                       <div class="my-2 space-y-1">
+                                           <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Name }}</h2>
+                                           <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.position }}</p>
+                                       </div>
+                                       <div class="flex justify-center pt-2 space-x-4 align-center">
+                                           <a rel="noopener noreferrer" onclick="del('{{ j.Team_id }}')" aria-label="delete" class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                                               <iconify-icon icon="material-symbols:delete-rounded" width="20" height="20"></iconify-icon>
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                           {% endfor %}
+                       </div>
+                   {% endfor %}
+               </section> -->
+          
+         </div>
+             <div class="row">
+               <div class="col-md-12 grid-margin stretch-card">
+                 <div class="card">
+                   <div class="card-body">
+                     <h4 class="card-title">Eligibility - section</h4>
+                    
+                     <form class="forms-sample" enctype="multipart/form-data" method="post">
+                       {% csrf_token %}
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">Sub-heading</label>
+                           <input type="text" class="form-control" placeholder="sub_heading" id="sub_heading" name="sub_heading">
+                         </div>
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">point-1</label>
+                           <input type="text" class="form-control" placeholder="point_1" id="point_1" name="point_1">
+                         </div>                    
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Point-2</label>
+                           <input type="text" class="form-control" placeholder="point_2" id="point_2" name="point_2">
+                         </div>       
+                         <div class="form-group">
+                            <label for="exampleInputEmail1">Point-3</label>
+                            <input type="text" class="form-control" placeholder="point_3" id="point_3" name="point_3">
+                          </div>   
+                        
+                     
+                       <button id="btn" onclick="upload()" class="btn btn-primary mr-2">Submit</button>
+                       <button class="btn btn-light">Cancel</button>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+           
+               <!-- <section class="overflow-hidden text-gray-700 ">
+                   {% for i in team %}
+                       <div>
+                           <h1 style="margin-top: 20px; margin-bottom: 12px; font-weight: bold; font-size: 22px;">{{ i.0.categories }}</h1>
+                           <hr>
+                       </div>
+                       <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                           {% for j in i %}
+                               <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                                   <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                                   <div class="space-y-4 text-center divide-y divide-gray-700">
+                                       <div class="my-2 space-y-1">
+                                           <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Name }}</h2>
+                                           <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.position }}</p>
+                                       </div>
+                                       <div class="flex justify-center pt-2 space-x-4 align-center">
+                                           <a rel="noopener noreferrer" onclick="del('{{ j.Team_id }}')" aria-label="delete" class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                                               <iconify-icon icon="material-symbols:delete-rounded" width="20" height="20"></iconify-icon>
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                           {% endfor %}
+                       </div>
+                   {% endfor %}
+               </section> -->
+          
+         </div>
+            
+             <!-- main-panel ends -->
+             
+             <!-- main-panel ends -->
+       
+             <!-- main-panel ends -->
+
+             <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <script>
+        // function upload() {
+        //         var data = new FormData();
+        //         data.append("image_file", $("#fileInput-single")[0].files[0])
+        //         data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val())
+        //         data.append("Category",$("#Category").val())
+        //         data.append("position",$("#position").val())
+        //         data.append("name",$("#name").val())
+        //         $.ajax({
+        //             method: "POST",
+        //             url: "update_team",
+        //             processData: false,
+        //             contentType: false,
+        //             mimeType: "multipart/form-data",
+        //             data: data,
+        //             success: function(data) {
+        //                 if (data.status == "Upload Done") {
+        //                     console.log("Uploading Done successfully")
+        //                 }
+        //                 else{
+        //                     console.log('error')
+        //                 }
+        //             }
+        //         })
+      //  }
+        // function del(id) {
+        //         $.ajax({
+        //             method: "POST",
+        //             url: 'delete_team',
+        //             data: {
+        //                 'id': id,
+        //                 'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+        //             }, success: function (data) {
+        //                 location.reload();
+        //             }
+        //         });
+        // }
+        // function val_upload(url,data) {
+        //         var data = new FormData();
+        //         data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+        //         data.forEach((item)=>{
+        //           data.append(item,$(item).val())
+        //         });
+        //         $.ajax({
+        //             method: "POST",
+        //             url: 'delete_team',
+        //             data: data,
+        //             success: function (data) {
+        //                 location.reload();
+        //             }
+        //         });
+        // }
+        // function img_upload(url,img,data) {
+        //         var data = new FormData();
+        //         data.append(img, $(img)[0].files[0]);
+        //         data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+        //         data.forEach((item)=>{
+        //           data.append(item,$(item).val())
+        //         });
+        //         data.append("Category",$("#Category").val())
+        //         data.append("position",$("#position").val())
+        //         data.append("name",$("#name").val())
+        //         $.ajax({
+        //             method: "POST",
+        //             url: url,
+        //             processData: false,
+        //             contentType: false,
+        //             mimeType: "multipart/form-data",
+        //             data: data,
+        //             success: function(data) {
+        //                 if (data.status == "Upload Done") {
+        //                     console.log("Uploading Done successfully")
+        //                 }
+        //                 else{
+        //                     console.log('error')
+        //                 }
+        //             }
+        //         })
+        // }
+
+  </script>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src=" {% static 'vendors/js/vendor.bundle.base.js' %} "></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src=" {% static 'vendors/typeahead.js/typeahead.bundle.min.js' %} "></script>
+  <script src=" {% static 'vendors/select2/select2.min.js' %} "></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src=" {% static 'js/off-canvas.js' %} "></script>
+  <script src=" {% static 'js/hoverable-collapse.js' %} "></script>
+  <script src=" {% static 'js/template.js' %} "></script>
+  <script src=" {% static 'js/settings.js' %} "></script>
+  <script src=" {% static 'js/todolist.js' %} "></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src=" {% static 'js/file-upload.js' %} "></script>
+  <script src=" {% static 'js/typeahead.js' %} "></script>
+  <script src=" {% static 'js/select2.js' %} "></script>
+  <!-- End custom js for this page-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+</body>
+
+</html>

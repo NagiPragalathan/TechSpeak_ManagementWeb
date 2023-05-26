@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Home Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href=" {% static 'vendors/feather/feather.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/ti-icons/css/themify-icons.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/css/vendor.bundle.base.css' %} ">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href=" {% static 'vendors/select2/select2.min.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/select2-bootstrap-theme/select2-bootstrap.min.css' %} ">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href=" {% static 'css/vertical-layout-light/style.css' %} ">
+  <!-- endinject -->
+  <link rel="shortcut icon" href=" {% static 'images/favicon.png' %} " />
+  <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="sidebar sidebar-offcanvas" style="width: 400px;" id="sidebar">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#homw" aria-expanded="false" aria-controls="ui-basic">
+            <iconify-icon icon="mdi:about" width="20" height="20"></iconify-icon>
+            <span class="menu-title">Home</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="homw">
+            <ul class="nav flex-column sub-menu " >
+              <li class="nav-item"> <a class="nav-link" href=" /home_edit">Home - page</a></li>
+              <li class="nav-item"> <a class="nav-link" href="/logo ">Logo - edit</a></li>
+            
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+            <iconify-icon icon="mdi:about" width="20" height="20"></iconify-icon>
+            <span class="menu-title">About Us</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="ui-basic">
+            <ul class="nav flex-column sub-menu " >
+              <li class="nav-item"> <a class="nav-link" href=" /about_edit ">About - page</a></li>
+              <li class="nav-item"> <a class="nav-link" href="/admin_team ">Team</a></li>
+              <li class="nav-item"> <a class="nav-link" href="/image_upload_page_gallery ">Gallery</a></li>
+              <li class="nav-item"> <a class="nav-link" href="#">Career</a></li>
+              <li class="nav-item"> <a class="nav-link" href="/testimonicals_edit ">Testimonials</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+            <iconify-icon icon="bx:book-reader" width="20" height="20"></iconify-icon>
+            <span class="menu-title">Government Funding</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse " id="form-elements">
+            <ul class="nav flex-column sub-menu flex-wrap  " style="display: block; z-index: 09999999;">
+              <li class="nav-item"><a class="nav-link" href="/birac_edit ">Ministry of Science and Technology</a></li>
+              <li class="nav-item"><a class="nav-link" href=" /sisfs_edit ">Ministry of commerce and industries</a></li>
+              <li class="nav-item"><a class="nav-link" href=" /fishieries">Fisheries startup Grand Challenge</a></li>
+              <li class="nav-item"><a class="nav-link" href="/samridth_edit ">Ministry of Electronics and IT</a></li>
+              <li class="nav-item"><a class="nav-link" href="/edi_edit ">Ministry of Education</a></li>
+              <li class="nav-item"><a class="nav-link" href="/startuptn_edit ">Start_UpTN</a></li>
+              <li class="nav-item"><a class="nav-link" href="/edi_edit ">EDII-IVP</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#charts_1" aria-expanded="false" aria-controls="charts">
+            <iconify-icon icon="teenyicons:bulb-on-solid" width="20" height="20"></iconify-icon>
+            <span class="menu-title">Services</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="charts_1">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href=" /service_edit ">Edit Page</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+            <iconify-icon icon="teenyicons:bulb-on-solid" width="20" height="20"></iconify-icon>
+            <span class="menu-title">MBA-IEV</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="charts">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href=" MBA_edit ">MBA-IEV EDIT page</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+            <iconify-icon icon="material-symbols:vpn-key-outline-rounded" width="20" height="20"></iconify-icon>
+            <span class="menu-title"> Our Startups</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="tables">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href=" /ourStartups_edit ">Edit Page</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#blog" aria-expanded="false" aria-controls="icons">
+            <iconify-icon icon="arcticons:netbenefits" width="20" height="20"></iconify-icon>
+            <span class="menu-title">Blog</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="blog">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href=" /list_edit_blog">Blog Edit Page</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+            <iconify-icon icon="arcticons:netbenefits" width="20" height="20"></iconify-icon>
+            <span class="menu-title">Benefits</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="icons">
+            <h5 class="m-2 p-4 primary">Mentor</h5>
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href=" /Mentor_Clinic_edit ">Mentor Clinic</a></li>
+              <li class="nav-item"> <a class="nav-link" href=" /Mentor_Connect_edit ">Mentor Connect</a></li>
+            </ul>
+            <h5 class="m-2 p-4 primary">Market</h5>
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href=" /GlobalMarket_edit ">Global Market Connect</a></li>
+              <li class="nav-item"> <a class="nav-link" href=" /demoday_edit ">Demo day</a></li>
+            </ul>
+
+            <h5 class="m-2 p-4 primary">Money</h5>
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href=" /stategovtfunds_edit ">State Govt Funding</a></li>
+              <li class="nav-item"> <a class="nav-link" href=" /CentralGovernmentFunding_edit ">central govt Funding</a></li>
+              <li class="nav-item"> <a class="nav-link" href=" /angelInvestor_edit ">Angel Investors</a></li>
+              <li class="nav-item"> <a class="nav-link" href=" /new_ventures_edit ">Venture Capitalist</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <i class="icon-head menu-icon"></i>
+            <span class="menu-title">Contact - Us</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="auth">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href="contact_edit "> Edit Page </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#foot" aria-expanded="false" aria-controls="auth">
+            <i class="icon-head menu-icon"></i>
+            <span class="menu-title">Footer</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="foot">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href="/footer_edit "> Footer edit page </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+            <iconify-icon icon="material-symbols:settings-suggest-rounded" width="20" height="20"></iconify-icon>
+            <span class="menu-title">Forms data Download</span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="collapse" id="error">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href="#"> Career Form </a></li>
+              <li class="nav-item"> <a class="nav-link" href="# "> Events Form </a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+
+
+
+
+      <!-- partial -->
+      <div class="main-panel">        
+        <div class="content-wrapper">
+            <!-- slider section -->
+            <div class="row">
+                <div class="col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Upload Image</h4>
+                      <p class="card-description">
+                       Upload image to  the home slider
+                      </p>
+                      <form class="forms-sample" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Title on the image</label>
+                          <input type="text" class="form-control" placeholder="Appear on top of image" id="Appear" value="{{ Uploadimage.0.Title }}" name="Appear-on-to-of-image">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Text on the image</label>
+                            <input type="text" class="form-control" placeholder="Appear on top of image" id="Appear-image" value="{{ Uploadimage.0.content }}" name="Appear-on-to-of-image">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">image</label>
+                          <input type="file" id="fileInput-single8" class="form-control drop-zoon__file-input" accept="image/*" name="image_file" >
+                        </div>
+                        <button id="btn" onclick="img_upload('upload_images','#fileInput-single8',['#Appear','#Appear-image'])" class="btn btn-primary mr-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+
+            <!-- second section -->
+            <section class="overflow-hidden text-gray-700 ">
+                <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                    {% for j in Uploadimage %}
+                        <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                            <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                            <div class="space-y-4 text-center divide-y divide-gray-700">
+                                <div class="my-2 space-y-1">
+                                    <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Title }}</h2>
+                                    <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.updated_date }}</p>
+                                </div>
+                                <div style="    display: flex; flex-direction: row; flex-wrap: wrap; align-content: center; justify-content: space-between; width: 100%; align-items: center;">
+                                  <button onclick="del('delete_upload','{{ j.id }}')" style="display: flex; flex-wrap: nowrap; flex-direction: row; align-content: center; justify-content: center; align-items: center;"><iconify-icon icon="ic:baseline-delete-forever" style="color: red;" width="20" height="20"></iconify-icon>
+                                  <h6>Delete</h6></button>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+          
+          </div>
+             <!-- second section -->
+             <div class="row">
+               <div class="col-md-12 grid-margin stretch-card">
+                 <div class="card">
+                   <div class="card-body">
+                     <h4 class="card-title">Who are we - section</h4>
+                     <p class="card-description">
+                     Who are we - para section
+                     </p>
+                     <form class="forms-sample" enctype="multipart/form-data" method="post">
+                       {% csrf_token %}
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">Sub heading</label>
+                           <input type="text" class="form-control" placeholder="Sub-heading" value="{{ whoweare.0.SubHeading }}" id="Sub-heading" name="Sub-heading">
+                         </div>
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Point-1</label>
+                           <input type="text" class="form-control" placeholder="Point-1" value="{{ whoweare.0.Point1 }}" id="Point-1" name="Point-1">
+                         </div>                    
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Point-2</label>
+                           <input type="text" class="form-control" placeholder="Point-2" id="Point-2" value="{{ whoweare.0.Point2 }}" name="Point-2">
+                         </div>                    
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Point-3</label>
+                           <input type="text" class="form-control" placeholder="Point-3" id="Point-3" value="{{ whoweare.0.Point3 }}" name="Point-3">
+                         </div>                    
+                       <div class="form-group">
+                         <label for="exampleInputEmail1">Point-4</label>
+                         <input type="text" class="form-control" placeholder="Point-4" id="Point-4" value="{{ whoweare.0.Point4 }}" name="Point-4">
+                       </div>
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">image</label>
+                         <h1>{{ whoweare.0.image.url }}</h1>
+                         <input type="file" id="image_file" class="form-control drop-zoon__file-input" value="{{ whoweare.0.image.url }}" accept="image/*" name="image_file" >
+                       </div>
+                       <button id="btn" onclick="img_upload('whoweare_save','#image_file',['#Sub-heading','#Point-1','#Point-2','#Point-3','#Point-4'])" class="btn btn-primary mr-2">Submit</button>
+                       <button class="btn btn-light">Cancel</button>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+           
+               <!-- <section class="overflow-hidden text-gray-700 ">
+                   {% for i in team %}
+                       <div>
+                           <h1 style="margin-top: 20px; margin-bottom: 12px; font-weight: bold; font-size: 22px;">{{ i.0.categories }}</h1>
+                           <hr>
+                       </div>
+                       <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                           {% for j in i %}
+                               <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                                   <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                                   <div class="space-y-4 text-center divide-y divide-gray-700">
+                                       <div class="my-2 space-y-1">
+                                           <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Name }}</h2>
+                                           <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.position }}</p>
+                                       </div>
+                                       <div class="flex justify-center pt-2 space-x-4 align-center">
+                                           <a rel="noopener noreferrer" onclick="del('{{ j.Team_id }}')" aria-label="delete" class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                                               <iconify-icon icon="material-symbols:delete-rounded" width="20" height="20"></iconify-icon>
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                           {% endfor %}
+                       </div>
+                   {% endfor %}
+               </section> -->
+          
+         </div>
+             <div class="row">
+               <div class="col-md-12 grid-margin stretch-card">
+                 <div class="card">
+                   <div class="card-body">
+                     <h4 class="card-title">HOME TESTIMONIAL</h4>
+                    
+                     <form class="forms-sample" enctype="multipart/form-data" method="post">
+                       {% csrf_token %}
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">Testimonial-content</label>
+                           <input type="text" class="form-control" placeholder="Testimonial" value="{{ ht.0.Testimonial_content }}" id="Testimonial" name="Testimonial">
+                         </div>
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Name</label>
+                           <input type="text" class="form-control" placeholder="Name" value="{{ ht.0.Name }}" id="Name" name="Name">
+                         </div>                    
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Designation</label>
+                           <input type="text" class="form-control" placeholder="Designation" value="{{ ht.0.Designation }}" id="Designation" name="Designation">
+                         </div>                    
+                     
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">image</label>
+                         <input type="file" id="fileInput-single1" class="form-control drop-zoon__file-input" accept="image/*" name="image_file" >
+                       </div>
+                       <button id="btn" onclick="img_upload('Home_TESTIMONIAL','#fileInput-single1',['#Testimonial','#Name','#Designation'])" class="btn btn-primary mr-2">Submit</button>
+                       <button class="btn btn-light">Cancel</button>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+           
+               <!-- <section class="overflow-hidden text-gray-700 ">
+                   {% for i in team %}
+                       <div>
+                           <h1 style="margin-top: 20px; margin-bottom: 12px; font-weight: bold; font-size: 22px;">{{ i.0.categories }}</h1>
+                           <hr>
+                       </div>
+                       <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                           {% for j in i %}
+                               <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                                   <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                                   <div class="space-y-4 text-center divide-y divide-gray-700">
+                                       <div class="my-2 space-y-1">
+                                           <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Name }}</h2>
+                                           <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.position }}</p>
+                                       </div>
+                                       <div class="flex justify-center pt-2 space-x-4 align-center">
+                                           <a rel="noopener noreferrer" onclick="del('{{ j.Team_id }}')" aria-label="delete" class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                                               <iconify-icon icon="material-symbols:delete-rounded" width="20" height="20"></iconify-icon>
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                           {% endfor %}
+                       </div>
+                   {% endfor %}
+               </section> -->
+          
+         </div>
+             <div class="row">
+               <div class="col-md-12 grid-margin stretch-card">
+                 <div class="card">
+                   <div class="card-body">
+                     <h4 class="card-title">INVESTOR-SECTION</h4>
+                    
+                     <form class="forms-sample" enctype="multipart/form-data" method="post">
+                       {% csrf_token %}
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">sub-heading</label>
+                           <input type="text" class="form-control" placeholder="sub-heading" value="{{ investors.0.Title }}" id="sub-heading" name="sub-heading">
+                         </div>
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">image</label>
+                         <input type="file" id="fileInput-single2" class="form-control drop-zoon__file-input" accept="image/*" name="image_file" >
+                       </div>
+                       <button id="btn" onclick="img_upload('investors','#fileInput-single2',['#sub-heading'])" class="btn btn-primary mr-2">Submit</button>
+                       <button class="btn btn-light">Cancel</button>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+           
+               <section class="overflow-hidden text-gray-700 ">
+                       <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                           {% for j in investors %}
+                               <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                                   <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                                   <div class="space-y-4 text-center divide-y divide-gray-700">
+                                       <div class="my-2 space-y-1">
+                                           <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Title }}</h2>
+                                           <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.updated_date }}</p>
+                                       </div>
+                                       <div style="    display: flex; flex-direction: row; flex-wrap: wrap; align-content: center; justify-content: space-between; width: 100%; align-items: center;">
+                                        <button onclick="del('delete_investors','{{ j.id }}')" style="display: flex; flex-wrap: nowrap; flex-direction: row; align-content: center; justify-content: center; align-items: center;"><iconify-icon icon="ic:baseline-delete-forever" style="color: red;" width="20" height="20"></iconify-icon>
+                                        <h6>Delete</h6></button>
+                                      </div>
+                                   </div>
+                               </div>
+                           {% endfor %}
+                       </div>
+               </section>
+          
+         </div>
+             <!-- main-panel ends -->
+             <div class="row">
+               <div class="col-md-12 grid-margin stretch-card">
+                 <div class="card">
+                   <div class="card-body">
+                     <h4 class="card-title">Govt-tie-up-SECTION</h4>
+                    
+                     <form class="forms-sample" enctype="multipart/form-data" method="post">
+                       {% csrf_token %}
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">sub-heading</label>
+                           <input type="text" class="form-control" placeholder="sub-heading" value="{{ govt.0.Title }}" id="sub-heading1" name="sub-heading">
+                         </div>
+                                    
+                     
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">image</label>
+                         <input type="file" id="fileInput-single4" class="form-control drop-zoon__file-input" accept="image/*" name="image_file" >
+                       </div>
+                       <button id="btn" onclick="img_upload('Govt_Tie','#fileInput-single4',['#sub-heading1'])" class="btn btn-primary mr-2">Submit</button>
+                       <button class="btn btn-light">Cancel</button>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+           
+               <section class="overflow-hidden text-gray-700 ">
+                <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                    {% for j in govt %}
+                        <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                            <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                            <div class="space-y-4 text-center divide-y divide-gray-700">
+                                <div class="my-2 space-y-1">
+                                    <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Title }}</h2>
+                                    <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.updated_date }}</p>
+                                </div>
+                                <div style="    display: flex; flex-direction: row; flex-wrap: wrap; align-content: center; justify-content: space-between; width: 100%; align-items: center;">
+                                  <button onclick="del('delete_Govt_Tie','{{ j.id }}')" style="display: flex; flex-wrap: nowrap; flex-direction: row; align-content: center; justify-content: center; align-items: center;"><iconify-icon icon="ic:baseline-delete-forever" style="color: red;" width="20" height="20"></iconify-icon>
+                                  <h6>Delete</h6></button>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+          
+         </div>
+             <!-- main-panel ends -->
+             <div class="row">
+               <div class="col-md-12 grid-margin stretch-card">
+                 <div class="card">
+                   <div class="card-body">
+                     <h4 class="card-title">International-partners-SECTION</h4>
+                    
+                     <form class="forms-sample" enctype="multipart/form-data" method="post">
+                       {% csrf_token %}
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">sub-heading</label>
+                           <input type="text" class="form-control" value="{{ ip.0.Title }}" placeholder="sub-heading" id="sub-heading6" name="sub-heading">
+                         </div>
+                                    
+                     
+                       <div class="form-group">
+                         <label for="exampleInputPassword1">image</label>
+                         <input type="file" id="fileInput-single3" class="form-control drop-zoon__file-input" accept="image/*" name="image_file" >
+                       </div>
+                       <button id="btn" onclick="img_upload('International_Partners','#fileInput-single3',['#sub-heading6'])" class="btn btn-primary mr-2">Submit</button>
+                       <button class="btn btn-light">Cancel</button>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+           
+               <section class="overflow-hidden text-gray-700 ">
+                <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                    {% for j in ip %}
+                        <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                            <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                            <div class="space-y-4 text-center divide-y divide-gray-700">
+                                <div class="my-2 space-y-1">
+                                    <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Title }}</h2>
+                                    <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.updated_date }}</p>
+                                </div>
+                                <div style="    display: flex; flex-direction: row; flex-wrap: wrap; align-content: center; justify-content: space-between; width: 100%; align-items: center;">
+                                  <button onclick="del('delete_Internationalpartners','{{ j.id }}')" style="display: flex; flex-wrap: nowrap; flex-direction: row; align-content: center; justify-content: center; align-items: center;"><iconify-icon icon="ic:baseline-delete-forever" style="color: red;" width="20" height="20"></iconify-icon>
+                                  <h6>Delete</h6></button>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+          
+         </div>
+             <!-- main-panel ends -->
+             <div class="row">
+               <div class="col-md-12 grid-margin stretch-card">
+                 <div class="card">
+                   <div class="card-body">
+                     <h4 class="card-title">Contact-SECTION</h4>
+                    
+                     <form class="forms-sample" enctype="multipart/form-data" method="post">
+                       {% csrf_token %}
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">Title</label>
+                           <input type="text" class="form-control" placeholder="Title" value="{{ cs.0.Title }}" id="Title" name="Title">
+                         </div>
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">Address</label>
+                           <input type="text" class="form-control" placeholder="Address" value="{{ cs.0.Address }}" id="Address" name="Address">
+                         </div>
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">Phone-number</label>
+                           <input type="text" class="form-control" placeholder="pno" value="{{ cs.0.Phone_number }}" id="pno" name="pno">
+                         </div>
+                       <div class="form-group">
+                           <label for="exampleInputEmail1">E-Mail</label>
+                           <input type="text" class="form-control" placeholder="E-Mail" value="{{ cs.0.E_Mail }}" id="E-Mail" name="E-Mail">
+                         </div>
+                       <button id="btn" onclick="send_data('Contact_Section',['#Title','#Address','#pno','#E-Mail'])" class="btn btn-primary mr-2">Submit</button>
+                       <button class="btn btn-light">Cancel</button>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+           
+               <!-- <section class="overflow-hidden text-gray-700 ">
+                   {% for i in team %}
+                       <div>
+                           <h1 style="margin-top: 20px; margin-bottom: 12px; font-weight: bold; font-size: 22px;">{{ i.0.categories }}</h1>
+                           <hr>
+                       </div>
+                       <div class="flex flex-wrap gap-4" style="display: flex;justify-content: center;align-items: center;align-content: center;flex-direction: row;">
+                           {% for j in i %}
+                               <div class="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100" style="    width: 250px;">
+                                   <img src="{{ j.image.url }}" alt="" class="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square">
+                                   <div class="space-y-4 text-center divide-y divide-gray-700">
+                                       <div class="my-2 space-y-1">
+                                           <h2 class="text-xl font-semibold sm:text-2xl">{{ j.Name }}</h2>
+                                           <p class="px-5 text-xs sm:text-base dark:text-gray-400">{{ j.position }}</p>
+                                       </div>
+                                       <div class="flex justify-center pt-2 space-x-4 align-center">
+                                           <a rel="noopener noreferrer" onclick="del('{{ j.Team_id }}')" aria-label="delete" class="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
+                                               <iconify-icon icon="material-symbols:delete-rounded" width="20" height="20"></iconify-icon>
+                                           </a>
+                                       </div>
+                                   </div>
+                               </div>
+                           {% endfor %}
+                       </div>
+                   {% endfor %}
+               </section> -->
+          
+         </div>
+             <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <script>
+       function send_data(url,datas) {
+                
+                console.log(datas,url)
+                var data = new FormData();
+                data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+                for(let i=0;i<datas.length;i++){
+                  data.append(datas[i],$(datas[i]).val())
+                }
+                $.ajax({
+                    method: "POST",
+                    url: url,
+                    processData: false,
+                    contentType: false,
+                    mimeType: "multipart/form-data",
+                    data: data,
+                    success: function(data) {
+                        if (data.status == "Upload Done") {
+                            console.log("Uploading Done successfully")
+                        }
+                        else{
+                            console.log('error')
+                        }
+                    }
+                })
+              }
+              function img_upload(url,img,datas) {
+                console.log(datas,img)
+                var data = new FormData();
+                data.append(img, $(img)[0].files[0]);
+                data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+                for(let i=0;i<datas.length;i++){
+                  data.append(datas[i],$(datas[i]).val())
+                }
+                $.ajax({
+                    method: "POST",
+                    url: url,
+                    processData: false,
+                    contentType: false,
+                    mimeType: "multipart/form-data",
+                    data: data,
+                    success: function(data) {
+                        if (data.status == "Upload Done") {
+                            console.log("Uploading Done successfully")
+                        }
+                        else{
+                            console.log('error')
+                        }
+                    }
+                })
+              }
+              function del(url,id) {
+                    $.ajax({
+                        method: "POST",
+                        url: url,
+                        data: {
+                            'id': id,
+                            'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+                        }, success: function (data) {
+                            location.reload();
+                        }
+                    });
+            }
+  </script>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src=" {% static 'vendors/js/vendor.bundle.base.js' %} "></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src=" {% static 'vendors/typeahead.js/typeahead.bundle.min.js' %} "></script>
+  <script src=" {% static 'vendors/select2/select2.min.js' %} "></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src=" {% static 'js/off-canvas.js' %} "></script>
+  <script src=" {% static 'js/hoverable-collapse.js' %} "></script>
+  <script src=" {% static 'js/template.js' %} "></script>
+  <script src=" {% static 'js/settings.js' %} "></script>
+  <script src=" {% static 'js/todolist.js' %} "></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src=" {% static 'js/file-upload.js' %} "></script>
+  <script src=" {% static 'js/typeahead.js' %} "></script>
+  <script src=" {% static 'js/select2.js' %} "></script>
+  <!-- End custom js for this page-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+</body>
+
+</html>

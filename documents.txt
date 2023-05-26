@@ -1,0 +1,6 @@
+To create super user :
+python manage.py createsuperuser --username=joe --email=joe@example.com
+
+Example :
+python manage.py createsuperuser --username=admin --email=admin@example.com
+password : admin@123

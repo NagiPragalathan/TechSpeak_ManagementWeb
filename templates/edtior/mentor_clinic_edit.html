@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Mentor clinic Admin</title>
+        <!-- plugins:css -->
+        <link rel="stylesheet" href=" {% static 'vendors/feather/feather.css' %} ">
+        <link rel="stylesheet" href=" {% static 'vendors/ti-icons/css/themify-icons.css' %} ">
+        <link rel="stylesheet" href=" {% static 'vendors/css/vendor.bundle.base.css' %} ">
+        <!-- endinject -->
+        <!-- Plugin css for this page -->
+        <link rel="stylesheet" href=" {% static 'vendors/select2/select2.min.css' %} ">
+        <link rel="stylesheet" href=" {% static 'vendors/select2-bootstrap-theme/select2-bootstrap.min.css' %} ">
+        <!-- End plugin css for this page -->
+        <!-- inject:css -->
+        <link rel="stylesheet" href=" {% static 'css/vertical-layout-light/style.css' %} ">
+        <!-- endinject -->
+        <link rel="shortcut icon" href=" {% static 'images/favicon.png' %} " />
+        <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+
+    <body onload="load_()">
+        <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar col-lg-16 col-15 p-0 fixed-top d-flex flex-row">
+                <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                  <a class="navbar-brand brand-logo mr-5" href=" {% static 'index.html' %} "><img src=" {{ logo.image.url }} " class="mr-2" alt="logo"/></a>
+                  <a class="navbar-brand brand-logo-mini" href=" {% static 'index.html' %} "><img src=" {{ logo.image.url }} " alt="logo"/></a>
+                </div>
+                <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end w-auto">
+                  <!-- <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                    <span class="icon-menu"></span>
+                  </button> -->
+                  
+                  <!-- <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="icon-menu"></span>
+                  </button> -->
+                </div>
+              </nav>
+              <!-- partial -->
+              <div class="container-fluid page-body-wrapper" style="z-index: 999;" >
+              
+              
+                <!-- partial -->
+                <!-- partial:partials/_sidebar.html -->
+                <nav class="sidebar sidebar-offcanvas" style="width: 400px;" id="sidebar">
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/logo ">
+                        <i class="icon-grid menu-icon"></i>
+                        <span class="menu-title pl-2 pt-2">Home</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                        <iconify-icon icon="mdi:about" width="20" height="20"></iconify-icon>
+                        <span class="menu-title">About Us</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="ui-basic">
+                        <ul class="nav flex-column sub-menu " >
+                          <li class="nav-item"> <a class="nav-link" href=" /about_edit ">About - page</a></li>
+                          <li class="nav-item"> <a class="nav-link" href="/admin_team ">Team</a></li>
+                          <li class="nav-item"> <a class="nav-link" href="/image_upload_page_gallery ">Gallery</a></li>
+                          <li class="nav-item"> <a class="nav-link" href="#">Career</a></li>
+                          <li class="nav-item"> <a class="nav-link" href="/testimonicals_edit ">Testimonials</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                        <iconify-icon icon="bx:book-reader" width="20" height="20"></iconify-icon>
+                        <span class="menu-title">Government Funding</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse " id="form-elements">
+                        <ul class="nav flex-column sub-menu flex-wrap  " style="display: block; z-index: 09999999;">
+                          <li class="nav-item"><a class="nav-link" href="/birac_edit ">Ministry of Science and Technology</a></li>
+                          <li class="nav-item"><a class="nav-link" href=" /sisfs_edit ">Ministry of commerce and industries</a></li>
+                          <li class="nav-item"><a class="nav-link" href=" /fishieries">Fisheries startup Grand Challenge</a></li>
+                          <li class="nav-item"><a class="nav-link" href="/samridth_edit ">Ministry of Electronics and IT</a></li>
+                          <li class="nav-item"><a class="nav-link" href="/edi_edit ">Ministry of Education</a></li>
+                          <li class="nav-item"><a class="nav-link" href="/startuptn_edit ">Start_UpTN</a></li>
+                          <li class="nav-item"><a class="nav-link" href="/edi_edit ">EDII-IVP</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#charts_1" aria-expanded="false" aria-controls="charts">
+                        <iconify-icon icon="teenyicons:bulb-on-solid" width="20" height="20"></iconify-icon>
+                        <span class="menu-title">Services</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="charts_1">
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href=" /service_edit ">Edit Page</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+                        <iconify-icon icon="teenyicons:bulb-on-solid" width="20" height="20"></iconify-icon>
+                        <span class="menu-title">MBA-IEV</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="charts">
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href=" MBA_edit ">MBA-IEV EDIT page</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                        <iconify-icon icon="material-symbols:vpn-key-outline-rounded" width="20" height="20"></iconify-icon>
+                        <span class="menu-title"> Our Startups</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="tables">
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href=" /ourStartups_edit ">Edit Page</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#blog" aria-expanded="false" aria-controls="icons">
+                        <iconify-icon icon="arcticons:netbenefits" width="20" height="20"></iconify-icon>
+                        <span class="menu-title">Blog</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="blog">
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href=" /list_edit_blog">Blog Edit Page</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                        <iconify-icon icon="arcticons:netbenefits" width="20" height="20"></iconify-icon>
+                        <span class="menu-title">Benefits</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="icons">
+                        <h5 class="m-2 p-4 primary">Mentor</h5>
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href=" /Mentor_Clinic_edit ">Mentor Clinic</a></li>
+                          <li class="nav-item"> <a class="nav-link" href=" /Mentor_Connect_edit ">Mentor Connect</a></li>
+                        </ul>
+                        <h5 class="m-2 p-4 primary">Market</h5>
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href=" /GlobalMarket_edit ">Global Market Connect</a></li>
+                          <li class="nav-item"> <a class="nav-link" href=" /demoday_edit ">Demo day</a></li>
+                        </ul>
+          
+                        <h5 class="m-2 p-4 primary">Money</h5>
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href=" /stategovtfunds_edit ">State Govt Funding</a></li>
+                          <li class="nav-item"> <a class="nav-link" href=" /CentralGovernmentFunding_edit ">central govt Funding</a></li>
+                          <li class="nav-item"> <a class="nav-link" href=" /angelInvestor_edit ">Angel Investors</a></li>
+                          <li class="nav-item"> <a class="nav-link" href=" /new_ventures_edit ">Venture Capitalist</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="icon-head menu-icon"></i>
+                        <span class="menu-title">Contact - Us</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="auth">
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href="contact_edit "> Edit Page </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#foot" aria-expanded="false" aria-controls="auth">
+                        <i class="icon-head menu-icon"></i>
+                        <span class="menu-title">Footer</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="foot">
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href="/footer_edit "> Footer edit page </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+                        <iconify-icon icon="material-symbols:settings-suggest-rounded" width="20" height="20"></iconify-icon>
+                        <span class="menu-title">Forms data Download</span>
+                        <i class="menu-arrow"></i>
+                      </a>
+                      <div class="collapse" id="error">
+                        <ul class="nav flex-column sub-menu">
+                          <li class="nav-item"> <a class="nav-link" href="#"> Career Form </a></li>
+                          <li class="nav-item"> <a class="nav-link" href="# "> Events Form </a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+          
+
+
+
+            <!-- partial -->
+            <div class="main-panel">        
+                <div class="content-wrapper">
+                    <!-- component -->
+                    <div>
+                        <h1 style="font-weight: bold;font-size: 28px;">Write Your Blog Here</h1>
+                    </div>
+                    <div class="py-12">
+                        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                                <div class="p-6 bg-white border-b border-gray-200">
+                                    <form method="POST" onload="load_()">
+                                            {% csrf_token %}
+                                        <label for="cars">Select the page :</label>
+
+                                        <select name="cars" id="page">
+                                              <option value="MentorConnect">MentorConnect</option>
+                                              <option value="saab">Saab</option>
+                                              <option value="mercedes">Mercedes</option>
+                                              <option value="audi">Audi</option>
+                                        </select>
+
+                                        <div class="mb-8">
+                                            <label class="text-xl text-gray-600">Content <span class="text-red-500">*</span></label></br>
+                                            <textarea name="editor2" id="editor2" class="border-2 border-gray-500">
+                                            </textarea>
+                                        </div>
+
+                                        <div class="flex p-1">
+                                            <select class="border-2 border-gray-300 border-r p-2" name="action">
+                                                <option>Save and Publish</option>
+                                                <option>Save Draft</option>
+                                            </select>
+                                            <button onclick="img_upload('Mentor_Clinic_save','#content',['#page'])" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8" id="content2">
+                        <div style="    padding: 23px;" class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                            <p>The number of <code>change</code> events: <strong><span id="changes"></span></strong>.</p>
+                            <h3>Mirrored Content</h3>
+                            {{ mentor.Content|escapejs }}
+                            <hr style="    border-top-width: 1px; margin-top: 14px;">
+                            <div id="editorcontent2" class="p-6 bg-white border-b border-gray-200">
+                            </div>
+                        </div>
+                    </div>
+            <!-- main-panel ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+        </div>
+        <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+        <script>
+            function load_(){
+              let val = "{{ mentor.0.Content|escapejs }}";
+              CKEDITOR.instances['editor2'].setData(val);
+            }
+
+              var changesCount = 0;
+              var editor2 = CKEDITOR.replace('editor2', {
+                removePlugins: 'sourcearea',
+                removeButtons: 'PasteFromWord'
+        
+              });
+              editor2.on('change', function(ev) {
+                changesCount++;
+                document.getElementById('content2').style.display = '';
+                document.getElementById('changes').innerHTML = changesCount.toString();
+                document.getElementById('editorcontent2').innerHTML = editor2.getData();
+              });
+            
+            function img_upload(url,con,datas) {
+                
+                console.log(datas,url)
+                var data = new FormData();
+                data.append(con,editor2.getData())
+                data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+                for(let i=0;i<datas.length;i++){
+                  data.append(datas[i],$(datas[i]).val())
+                }
+                $.ajax({
+                    method: "POST",
+                    url: url,
+                    processData: false,
+                    contentType: false,
+                    mimeType: "multipart/form-data",
+                    data: data,
+                    success: function(data) {
+                        if (data.status == "Upload Done") {
+                            console.log("Uploading Done successfully")
+                        }
+                        else{
+                            console.log('error')
+                        }
+                    }
+                })
+              }
+          </script>
+        <!-- container-scroller -->
+        <!-- plugins:js -->
+        <script src=" {% static 'vendors/js/vendor.bundle.base.js' %} "></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page -->
+        <script src=" {% static 'vendors/typeahead.js/typeahead.bundle.min.js' %} "></script>
+        <script src=" {% static 'vendors/select2/select2.min.js' %} "></script>
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src=" {% static 'js/off-canvas.js' %} "></script>
+        <script src=" {% static 'js/hoverable-collapse.js' %} "></script>
+        <script src=" {% static 'js/template.js' %} "></script>
+        <script src=" {% static 'js/settings.js' %} "></script>
+        <script src=" {% static 'js/todolist.js' %} "></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src=" {% static 'js/file-upload.js' %} "></script>
+        <script src=" {% static 'js/typeahead.js' %} "></script>
+        <script src=" {% static 'js/select2.js' %} "></script>
+        <!-- End custom js for this page-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+    </body>
+
+</html>

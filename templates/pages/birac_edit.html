@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>BIRAC Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href=" {% static 'vendors/feather/feather.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/ti-icons/css/themify-icons.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/css/vendor.bundle.base.css' %} ">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href=" {% static 'vendors/select2/select2.min.css' %} ">
+  <link rel="stylesheet" href=" {% static 'vendors/select2-bootstrap-theme/select2-bootstrap.min.css' %} ">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href=" {% static 'css/vertical-layout-light/style.css' %} ">
+  <!-- endinject -->
+  <link rel="shortcut icon" href=" {% static 'images/favicon.png' %} " />
+  <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link
+  href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+  rel="stylesheet"
+    />
+    <link
+    href="https://unpkg.com/@yaireo/tagify/dist/tagify.css"
+    rel="stylesheet"
+    type="text/css"
+    />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-16 col-15 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href=" {% static 'index.html' %} "><img src=" {{ logo.image.url }} " class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href=" {% static 'index.html' %} "><img src=" {{ logo.image.url }} " alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end w-auto">
+        <!-- <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button> -->
+        
+        <!-- <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button> -->
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper" style="z-index: 999;" >
+    
+    
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" style="width: 400px;" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#homw" aria-expanded="false" aria-controls="ui-basic">
+              <iconify-icon icon="mdi:about" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Home</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="homw">
+              <ul class="nav flex-column sub-menu " >
+                <li class="nav-item"> <a class="nav-link" href=" /home_edit">Home - page</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/logo ">Logo - edit</a></li>
+              
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <iconify-icon icon="mdi:about" width="20" height="20"></iconify-icon>
+              <span class="menu-title">About Us</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu " >
+                <li class="nav-item"> <a class="nav-link" href=" /about_edit ">About - page</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin_team ">Team</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/image_upload_page_gallery ">Gallery</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Career</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/testimonicals_edit ">Testimonials</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <iconify-icon icon="bx:book-reader" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Government Funding</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse " id="form-elements">
+              <ul class="nav flex-column sub-menu flex-wrap  " style="display: block; z-index: 09999999;">
+                <li class="nav-item"><a class="nav-link" href="/birac_edit ">Ministry of Science and Technology</a></li>
+                <li class="nav-item"><a class="nav-link" href=" /sisfs_edit ">Ministry of commerce and industries</a></li>
+                <li class="nav-item"><a class="nav-link" href=" /fishieries">Fisheries startup Grand Challenge</a></li>
+                <li class="nav-item"><a class="nav-link" href="/samridth_edit ">Ministry of Electronics and IT</a></li>
+                <li class="nav-item"><a class="nav-link" href="/edi_edit ">Ministry of Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="/startuptn_edit ">Start_UpTN</a></li>
+                <li class="nav-item"><a class="nav-link" href="/edi_edit ">EDII-IVP</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts_1" aria-expanded="false" aria-controls="charts">
+              <iconify-icon icon="teenyicons:bulb-on-solid" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Services</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts_1">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /service_edit ">Edit Page</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <iconify-icon icon="teenyicons:bulb-on-solid" width="20" height="20"></iconify-icon>
+              <span class="menu-title">MBA-IEV</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" MBA_edit ">MBA-IEV EDIT page</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <iconify-icon icon="material-symbols:vpn-key-outline-rounded" width="20" height="20"></iconify-icon>
+              <span class="menu-title"> Our Startups</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /ourStartups_edit ">Edit Page</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#blog" aria-expanded="false" aria-controls="icons">
+              <iconify-icon icon="arcticons:netbenefits" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Blog</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="blog">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /list_edit_blog">Blog Edit Page</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <iconify-icon icon="arcticons:netbenefits" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Benefits</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <h5 class="m-2 p-4 primary">Mentor</h5>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /Mentor_Clinic_edit ">Mentor Clinic</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /Mentor_Connect_edit ">Mentor Connect</a></li>
+              </ul>
+              <h5 class="m-2 p-4 primary">Market</h5>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /GlobalMarket_edit ">Global Market Connect</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /demoday_edit ">Demo day</a></li>
+              </ul>
+
+              <h5 class="m-2 p-4 primary">Money</h5>
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href=" /stategovtfunds_edit ">State Govt Funding</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /CentralGovernmentFunding_edit ">central govt Funding</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /angelInvestor_edit ">Angel Investors</a></li>
+                <li class="nav-item"> <a class="nav-link" href=" /new_ventures_edit ">Venture Capitalist</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Contact - Us</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="contact_edit "> Edit Page </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#foot" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Footer</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="foot">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/footer_edit "> Footer edit page </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <iconify-icon icon="material-symbols:settings-suggest-rounded" width="20" height="20"></iconify-icon>
+              <span class="menu-title">Forms data Download</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="#"> Career Form </a></li>
+                <li class="nav-item"> <a class="nav-link" href="# "> Events Form </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+
+
+
+
+      <!-- partial -->
+      <div class="main-panel">        
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Upload image</h4>
+                
+                  <form class="forms-sample" enctype="multipart/form-data" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Title</label>
+                        <input type="text" class="form-control" placeholder="title" id="title" topic="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Sub Title</label>
+                        <input type="text" class="form-control" placeholder="subtitle" id="subtitle" topic="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Content</label>
+                        <input type="text" class="form-control" placeholder="content" id="content" name="program">
+                    </div>
+                        <div class="w-1/2">
+                          <label for="Tags" class="block mb-2 text-sm text-gray-600">Overview</label>
+                          <input
+                            type="text"
+                            class="w-full px-4 py-6 text-sm border border-gray-300 rounded outline-none"
+                            name="tags"
+                            value=" "
+                            autofocus
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Top-Image</label>
+                          <input type="file" id="fileInput-single_image" class="form-control drop-zoon__file-input" accept="image/*" name="image_file" >
+                        </div>
+                    <button id="btn" onclick="img_upload('birac_save','#fileInput-single_image',['#title','#subtitle','#content'])" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+            
+            <div class="row">
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Facilities Developed</h4>
+                  
+                    <form class="forms-sample" enctype="multipart/form-data" method="post">
+                      {% csrf_token %}
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Heading</label>
+                          <input type="text" class="form-control" placeholder="Heading" id="Heading" topic="Heading">
+                      </div>
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Content</label>
+                          <input type="text" class="form-control" placeholder="Content" id="Content" topic="Content">
+                      </div>
+                    
+                      <button id="btn" onclick="send_data('facilities_developed_save',['#Heading','#Content'])" class="btn btn-primary mr-2">Submit</button>
+                      <button class="btn btn-light">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <section>
+                                <!-- This is an example component -->
+                  <div>
+
+                    <div class="p-4 bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                      <div class="flex justify-between items-center mb-4">
+                          <h3 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Facilities developed</h3>
+                    </div>
+                    <div class="flow-root">
+                          <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                            {% for i in Facilities_developed %}
+                              <li class="py-3 sm:py-4">
+                                  <div class="flex items-center space-x-4">
+                                      <div class="flex-shrink-0">
+                                        <button onclick="del3('{{ i.FD_id }}')"><iconify-icon icon="ic:baseline-delete" width="50" height="50"></iconify-icon></button>
+                                      </div>
+                                      <div class="flex-1 min-w-0">
+                                          <p class="text-sm font-medium text-gray-900 dark:text-white">
+                                              {{ i.topic }}
+                                          </p>
+                                          <p class="text-gray-500 dark:text-gray-400">
+                                            {{ i.content }}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                    </div>
+                </section>
+        
+            <section class="overflow-hidden text-gray-700 " style="display: flex;align-content: space-between;justify-content: space-between;align-items: center;flex-direction: row;flex-wrap: wrap;">
+                <div class="flex justify-center grid md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-3">
+                    {% for i,j in birac.items %}
+                    <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm" style="    margin-left: 10px;margin-top: 10px;">
+                      <img src="{{ i.image.url }}" alt="">
+                      <h2 class="text-gray-900 text-xl leading-tight font-medium mb-2">{{ i.title }}</h2>
+                      <h6 class="text-gray-900 text-xl leading-tight mb-2">{{ i.subtitle }}</h6>
+
+                      <p class="text-gray-700 text-base mb-4">
+                        {{ i.description }}
+                      </p>
+                        <ul style="margin-bottom: 15px;" class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            {% for i,j in j.items %}
+                                <li class="w-full px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600"><span style="    font-size: 21px;
+                                    font-weight: bold;">{{ i }} : </span> {{ j }}</li>
+                            {% endfor %}
+                        </ul>
+                      
+                      <button onclick="del1('{{ i.id }}')" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Delete</button>
+                      <button onclick="del('{{ i.id }}')" type="button" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Set</button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>       
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <script src="https://unpkg.com/@yaireo/tagify"></script>
+    <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+  <script>
+        var input = document.querySelector('input[name=tags]');
+      // initialize Tagify on the above input node reference
+      new Tagify(input);
+      input.addEventListener('change', function () {  
+        console.log(input.value)
+       });  
+       function del(id) {
+            $.ajax({
+                method: "get",
+                url: 'set_birac',
+                data: {
+                    'id': id,
+                    'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+                }, success: function (data) {
+                    location.reload();
+                }
+            });
+        }
+        function del1(id) {
+            $.ajax({
+                method: "get",
+                url: 'delete_birac',
+                data: {
+                    'id': id,
+                    'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+                }, success: function (data) {
+                    location.reload();
+                }
+            });
+        }
+        function img_upload(url,img,datas) {
+                console.log(datas,img)
+                var data = new FormData();
+                data.append(img, $(img)[0].files[0]);
+                data.append('tags',input.value);
+                data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+                for(let i=0;i<datas.length;i++){
+                  data.append(datas[i],$(datas[i]).val())
+                }
+                $.ajax({
+                    method: "POST",
+                    url: url,
+                    processData: false,
+                    contentType: false,
+                    mimeType: "multipart/form-data",
+                    data: data,
+                    success: function(data) {
+                        if (data.status == "Upload Done") {
+                            console.log("Uploading Done successfully")
+                        }
+                        else{
+                            console.log('error')
+                        }
+                    }
+                })
+              }
+              function send_data(url,datas) {
+                
+                console.log(datas,url)
+                var data = new FormData();
+                data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+                for(let i=0;i<datas.length;i++){
+                  data.append(datas[i],$(datas[i]).val())
+                }
+                $.ajax({
+                    method: "POST",
+                    url: url,
+                    processData: false,
+                    contentType: false,
+                    mimeType: "multipart/form-data",
+                    data: data,
+                    success: function(data) {
+                        if (data.status == "Upload Done") {
+                            console.log("Uploading Done successfully")
+                        }
+                        else{
+                            console.log('error')
+                        }
+                    }
+                })
+              }
+        function del3(id) {
+            $.ajax({
+                method: "get",
+                url: 'delete_facilities_developed',
+                data: {
+                    'id': id,
+                    'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+                }, success: function (data) {
+                    location.reload();
+                }
+            });
+        }
+
+
+
+  </script>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src=" {% static 'vendors/js/vendor.bundle.base.js' %} "></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src=" {% static 'vendors/typeahead.js/typeahead.bundle.min.js' %} "></script>
+  <script src=" {% static 'vendors/select2/select2.min.js' %} "></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src=" {% static 'js/off-canvas.js' %} "></script>
+  <script src=" {% static 'js/hoverable-collapse.js' %} "></script>
+  <script src=" {% static 'js/template.js' %} "></script>
+  <script src=" {% static 'js/settings.js' %} "></script>
+  <script src=" {% static 'js/todolist.js' %} "></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src=" {% static 'js/file-upload.js' %} "></script>
+  <script src=" {% static 'js/typeahead.js' %} "></script>
+  <script src=" {% static 'js/select2.js' %} "></script>
+  <!-- End custom js for this page-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+</body>
+
+</html>
