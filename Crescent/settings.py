@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2%vvk$9n_6#p%uz-%(74(tcw=-um#c(8-!@7(um36xr+lk(y^q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-DEPLOYMENT=False
+DEPLOYMENT=True
 
 if DEPLOYMENT:
     ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh','*']
@@ -87,7 +87,7 @@ if DEPLOYMENT:
         'CLIENT': {
             
             'host': "mongodb+srv://nagi:nagi@cluster0.ohv5gsc.mongodb.net/nagidb",
-            'name':'TechSpeak',
+            'name':'TechSpeak_Web',
             'authMechanism': "SCRAM-SHA-1",
         }
     }
